@@ -1,0 +1,25 @@
+# Local dependencies, caches, and test output
+node_modules/
+coverage/
+.cache/
+__pycache__/
+*.py[cod]
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+
+# Editor and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Internal working notes and earlier design history
+.superpowers/
+docs/superpowers/

@@ -1,0 +1,73 @@
+/* 01 / Editorial — warm paper, terracotta ink, classic serif typography. */
+:root[data-design="editorial"] {
+  --background: #f6f0e6;
+  --surface: #fffaf1;
+  --surface-raised: #e9ded0;
+  --foreground: #302921;
+  --muted: #706255;
+  --line: #d3c5b3;
+  --accent: #a3422d;
+  --accent-fill: #9d3f2b;
+  --accent-ink: #fffaf1;
+  --grid: #daccba;
+  --sans: Verdana, Geneva, sans-serif;
+  --mono: "Courier New", Courier, monospace;
+  --editorial-serif: Georgia, "Times New Roman", serif;
+  color-scheme: light;
+}
+:root[data-design="editorial"][data-theme="dark"] {
+  --background: #24201b;
+  --surface: #2d2721;
+  --surface-raised: #383026;
+  --foreground: #f5ebdc;
+  --muted: #c0ad97;
+  --line: #544738;
+  --accent: #eba58b;
+  --accent-fill: #eba58b;
+  --accent-ink: #30221a;
+  --grid: #473c30;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root[data-design="editorial"]:not([data-theme="light"]):not([data-theme="dark"]) {
+    --background: #24201b; --surface: #2d2721; --surface-raised: #383026;
+    --foreground: #f5ebdc; --muted: #c0ad97; --line: #544738;
+    --accent: #eba58b; --accent-fill: #eba58b; --accent-ink: #30221a;
+    --grid: #473c30; color-scheme: dark;
+  }
+}
+body { background-image: radial-gradient(var(--line) .5px, transparent .5px); background-size: 8px 8px; }
+.brand-mark, h1, h2, .monogram { font-family: var(--editorial-serif); font-weight: 400; }
+.brand-mark { font-style: italic; letter-spacing: -.12em; }
+.brand-name { font-size: .75rem; letter-spacing: .02em; }
+nav { font-size: .8rem; }
+h1 { letter-spacing: -.065em; font-size: clamp(4rem, 8.5vw, 8rem); line-height: .98; }
+h2 { letter-spacing: -.04em; }
+h3 { font-family: var(--editorial-serif); font-size: 1.35rem; font-weight: 400; }
+.hero-role { font-family: var(--editorial-serif); font-weight: 400; font-size: clamp(1.25rem, 1.8vw, 1.65rem); }
+.hero-description, .about-content > p, .connect-description { font-size: .9rem; line-height: 1.85; }
+.eyebrow { letter-spacing: .1em; }
+.section-number { font-weight: 700; }
+.site-header { border-bottom: 3px double var(--line); }
+.button { border-radius: 0; letter-spacing: .01em; }
+.button-primary { border: 1px solid var(--accent-fill); }
+.button-primary:hover { background: var(--foreground); color: var(--background); border-color: var(--foreground); }
+.text-link { font-family: var(--editorial-serif); font-size: 1.05rem; font-style: italic; }
+.monogram-grid { border: 1px solid var(--line); background-color: var(--surface-raised); background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px); background-size: 25% 25%; }
+.monogram-grid::before { content: ""; position: absolute; inset: 8%; border: 1px solid var(--accent); border-radius: 50%; opacity: .35; }
+.monogram { font-style: italic; letter-spacing: -.14em; padding-right: .2em; }
+.grid-coordinate { background: var(--surface-raised); }
+.hero-bottom { border-top: 3px double var(--line); }
+.project-card { border-radius: 0; }
+.project-preview { background-image: repeating-linear-gradient(-45deg, transparent, transparent 8px, var(--grid) 8px, var(--grid) 9px); }
+.preview-two { background-image: radial-gradient(var(--grid) 1px, transparent 1px); background-size: 8px 8px; }
+.preview-three { background-image: repeating-linear-gradient(90deg, transparent, transparent 12px, var(--grid) 12px, var(--grid) 13px); }
+.project-placeholder-symbol { font-family: var(--editorial-serif); color: var(--accent); opacity: .85; font-style: italic; }
+.tag, .settings-toggle, .settings-panel, .setting-options span { border-radius: 0; }
+.tag { text-transform: uppercase; font-size: .65rem; letter-spacing: .05em; }
+.about-content .about-intro { font-family: var(--editorial-serif); font-size: 1.5rem; color: var(--foreground); }
+.skills-placeholder { border-style: solid; border-radius: 0; background: var(--surface); }
+.social-placeholder { border-block: 3px double var(--line); }
+.site-footer { border-top: 3px double var(--line); }
+@media (max-width: 760px) { h1 { font-size: clamp(4.4rem, 15vw, 7rem); } }
+@media (max-width: 460px) { h1 { font-size: clamp(2rem, 18vw, 5rem); } }

@@ -1,0 +1,266 @@
+/* Signal: crisp typography, instrument-like surfaces, and electric blue. */
+:root[data-design="signal"] {
+  --background: #edf2fa;
+  --surface: #f8fbff;
+  --surface-raised: #dfe9f8;
+  --foreground: #10213c;
+  --muted: #4a607e;
+  --line: #bdcce2;
+  --accent: #1558cd;
+  --accent-fill: #1558cd;
+  --accent-ink: #ffffff;
+  --accent-hover: #0e45a7;
+  --grid: #c8d8ed;
+  --signal-cobalt: #2d63d4;
+  --signal-wash: #1558cd0b;
+  --signal-shadow: #10213c1c;
+  --sans: "Bahnschrift", "DIN Alternate", "Segoe UI", Arial, sans-serif;
+  --mono: "Cascadia Mono", "Cascadia Code", Consolas, monospace;
+  color-scheme: light;
+}
+
+:root[data-design="signal"][data-theme="dark"] {
+  --background: #080f20;
+  --surface: #0d1930;
+  --surface-raised: #132442;
+  --foreground: #edf5ff;
+  --muted: #adbed7;
+  --line: #2c4162;
+  --accent: #76e4ff;
+  --accent-fill: #76e4ff;
+  --accent-ink: #07172b;
+  --accent-hover: #a1edff;
+  --grid: #1e3658;
+  --signal-cobalt: #3976ff;
+  --signal-wash: #3976ff0d;
+  --signal-shadow: #00000055;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-design="signal"]:not([data-theme="light"]):not([data-theme="dark"]) {
+    --background: #080f20;
+    --surface: #0d1930;
+    --surface-raised: #132442;
+    --foreground: #edf5ff;
+    --muted: #adbed7;
+    --line: #2c4162;
+    --accent: #76e4ff;
+    --accent-fill: #76e4ff;
+    --accent-ink: #07172b;
+    --accent-hover: #a1edff;
+    --grid: #1e3658;
+    --signal-cobalt: #3976ff;
+    --signal-wash: #3976ff0d;
+    --signal-shadow: #00000055;
+    color-scheme: dark;
+  }
+}
+
+:root[data-design="signal"] body {
+  background-image: linear-gradient(115deg, transparent 55%, var(--signal-wash));
+}
+
+:root[data-design="signal"] .brand-mark {
+  font-family: var(--mono);
+  font-weight: 700;
+  letter-spacing: -.12em;
+}
+
+:root[data-design="signal"] .brand-name,
+:root[data-design="signal"] nav,
+:root[data-design="signal"] .text-link,
+:root[data-design="signal"] .button {
+  font-family: var(--mono);
+  font-size: .75rem;
+  font-weight: 500;
+  letter-spacing: .015em;
+}
+
+:root[data-design="signal"] .brand-name,
+:root[data-design="signal"] nav {
+  text-transform: uppercase;
+}
+
+:root[data-design="signal"] nav {
+  color: var(--muted);
+}
+
+:root[data-design="signal"] .eyebrow {
+  letter-spacing: .1em;
+}
+
+:root[data-design="signal"] h1 {
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: .97;
+}
+
+:root[data-design="signal"] h2 {
+  font-weight: 600;
+  letter-spacing: -.035em;
+}
+
+:root[data-design="signal"] h3 {
+  font-weight: 600;
+  letter-spacing: -.015em;
+}
+
+:root[data-design="signal"] .hero-role {
+  font-weight: 500;
+}
+
+:root[data-design="signal"] .section-number {
+  font-weight: 600;
+}
+
+:root[data-design="signal"] .button {
+  border-radius: 0;
+  text-transform: uppercase;
+  border: 1px solid var(--accent-fill);
+}
+
+:root[data-design="signal"] .button-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  box-shadow: 0 3px 0 var(--signal-cobalt);
+}
+
+:root[data-design="signal"] .text-link {
+  border-bottom-color: var(--accent);
+}
+
+:root[data-design="signal"] .settings-toggle,
+:root[data-design="signal"] .settings-panel,
+:root[data-design="signal"] .setting-options span {
+  border-radius: 0;
+}
+
+:root[data-design="signal"] .settings-toggle {
+  background: var(--surface);
+}
+
+:root[data-design="signal"] .settings-panel {
+  border-top: 2px solid var(--accent);
+  box-shadow: 0 16px 50px var(--signal-shadow);
+}
+
+:root[data-design="signal"] .settings-title {
+  font-weight: 500;
+}
+
+:root[data-design="signal"] .setting-options span {
+  font-family: var(--mono);
+  font-size: .75rem;
+}
+
+:root[data-design="signal"] .monogram-grid {
+  background-color: var(--surface);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    radial-gradient(ellipse at 75% 15%, var(--signal-wash), transparent 75%);
+  box-shadow: inset 0 0 0 8px var(--background);
+}
+
+:root[data-design="signal"] .monogram {
+  font-family: var(--mono);
+  font-size: clamp(6rem, 11vw, 11rem);
+  font-weight: 600;
+  letter-spacing: -.14em;
+  text-shadow: 5px 5px 0 var(--signal-wash);
+}
+
+:root[data-design="signal"] .monogram span {
+  color: var(--signal-cobalt);
+}
+
+:root[data-design="signal"] .grid-axis {
+  background: var(--signal-cobalt);
+  opacity: .65;
+}
+
+:root[data-design="signal"] .grid-coordinate {
+  border-left: 2px solid var(--accent);
+  color: var(--foreground);
+}
+
+:root[data-design="signal"] .hero-side-caption {
+  letter-spacing: .055em;
+}
+
+:root[data-design="signal"] .hero-bottom {
+  border-top-color: var(--signal-cobalt);
+}
+
+:root[data-design="signal"] .project-card {
+  border-radius: 0;
+}
+
+:root[data-design="signal"] .project-preview {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+:root[data-design="signal"] .preview-two {
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 16px, var(--grid) 16px, var(--grid) 17px);
+}
+
+:root[data-design="signal"] .preview-three {
+  background-image: radial-gradient(var(--grid) 1.5px, transparent 1.5px);
+  background-size: 14px 14px;
+}
+
+:root[data-design="signal"] .project-index {
+  color: var(--foreground);
+  background: var(--surface);
+  padding: .1rem .4rem;
+  border-left: 2px solid var(--signal-cobalt);
+}
+
+:root[data-design="signal"] .project-placeholder-symbol {
+  color: var(--accent);
+  opacity: .85;
+}
+
+:root[data-design="signal"] .tag {
+  border-radius: 0;
+  color: var(--accent);
+  background: var(--signal-wash);
+}
+
+:root[data-design="signal"] .journey-year {
+  font-weight: 600;
+}
+
+:root[data-design="signal"] .skills-placeholder {
+  border-radius: 0;
+  border-style: solid;
+  border-left: 3px solid var(--signal-cobalt);
+  background: var(--surface);
+}
+
+:root[data-design="signal"] .social-icon {
+  color: var(--signal-cobalt);
+}
+
+:root[data-design="signal"] a:focus-visible,
+:root[data-design="signal"] button:focus-visible {
+  border-radius: 0;
+}
+
+@media (max-width: 460px) {
+  :root[data-design="signal"] .eyebrow {
+    letter-spacing: .035em;
+  }
+
+  :root[data-design="signal"] nav {
+    font-size: .6875rem;
+  }
+
+  :root[data-design="signal"] .button {
+    padding-inline: 1rem;
+  }
+}

@@ -1,0 +1,260 @@
+/* Studio preview: a softer palette and rounded type on the shared portfolio layout. */
+:root[data-design="studio"] {
+  --background: #f7f3fa;
+  --surface: #fffcff;
+  --surface-raised: #eee3f4;
+  --foreground: #302336;
+  --muted: #68566e;
+  --line: #ddd0e3;
+  --accent: #743c7c;
+  --accent-fill: #ead2ef;
+  --accent-ink: #47234d;
+  --grid: #e2d4e8;
+  --sans: "Trebuchet MS", Verdana, Arial, sans-serif;
+  --mono: "Trebuchet MS", Verdana, Arial, sans-serif;
+  --studio-mint: #dceee5;
+  --studio-mint-ink: #3c6654;
+  --studio-peach: #f6e0d4;
+  --studio-button-hover: #dfbde7;
+  --studio-shadow: #4c285a0c;
+  color-scheme: light;
+}
+
+:root[data-design="studio"][data-theme="dark"] {
+  --background: #211925;
+  --surface: #2b2230;
+  --surface-raised: #382b3f;
+  --foreground: #f6edf8;
+  --muted: #c1b0c9;
+  --line: #4c3b56;
+  --accent: #dab4e6;
+  --accent-fill: #d8b5e3;
+  --accent-ink: #38213f;
+  --grid: #4c3b56;
+  --studio-mint: #2b443b;
+  --studio-mint-ink: #a9d7c0;
+  --studio-peach: #4b3533;
+  --studio-button-hover: #e6cbef;
+  --studio-shadow: #0000001c;
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-design="studio"]:not([data-theme="light"]):not([data-theme="dark"]) {
+    --background: #211925;
+    --surface: #2b2230;
+    --surface-raised: #382b3f;
+    --foreground: #f6edf8;
+    --muted: #c1b0c9;
+    --line: #4c3b56;
+    --accent: #dab4e6;
+    --accent-fill: #d8b5e3;
+    --accent-ink: #38213f;
+    --grid: #4c3b56;
+    --studio-mint: #2b443b;
+    --studio-mint-ink: #a9d7c0;
+    --studio-peach: #4b3533;
+    --studio-button-hover: #e6cbef;
+    --studio-shadow: #0000001c;
+    color-scheme: dark;
+  }
+}
+
+:root[data-design="studio"] .brand-mark {
+  font-weight: 900;
+  letter-spacing: -.12rem;
+}
+
+:root[data-design="studio"] .brand-name,
+:root[data-design="studio"] nav,
+:root[data-design="studio"] .settings-title {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] h1 {
+  font-weight: 800;
+  letter-spacing: -.055em;
+}
+
+:root[data-design="studio"] h2 {
+  font-weight: 800;
+  letter-spacing: -.04em;
+}
+
+:root[data-design="studio"] h3,
+:root[data-design="studio"] .hero-role {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .eyebrow {
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+
+:root[data-design="studio"] .section-number {
+  font-weight: 800;
+}
+
+:root[data-design="studio"] .button,
+:root[data-design="studio"] .settings-toggle,
+:root[data-design="studio"] .setting-options span,
+:root[data-design="studio"] .skip-link {
+  border-radius: 999px;
+}
+
+:root[data-design="studio"] .button {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .button-primary {
+  box-shadow: 0 5px 16px var(--studio-shadow);
+}
+
+:root[data-design="studio"] .button-primary:hover {
+  background: var(--studio-button-hover);
+}
+
+:root[data-design="studio"] .text-link {
+  border-bottom-color: var(--accent);
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .settings-toggle {
+  background: var(--surface);
+}
+
+:root[data-design="studio"] .settings-panel {
+  border-radius: 22px;
+  box-shadow: 0 18px 45px var(--studio-shadow);
+}
+
+:root[data-design="studio"] .settings-current,
+:root[data-design="studio"] legend {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .monogram-grid {
+  border-color: var(--line);
+  border-radius: 32px;
+  overflow: hidden;
+  isolation: isolate;
+  background: radial-gradient(ellipse at 15% 5%, var(--surface) 0, transparent 65%), var(--surface-raised);
+}
+
+:root[data-design="studio"] .monogram-grid::before {
+  content: "";
+  position: absolute;
+  inset: 16% 9% 12% 15%;
+  border-radius: 48% 52% 42% 58% / 57% 40% 60% 43%;
+  background: var(--studio-mint);
+  transform: rotate(-17deg);
+}
+
+:root[data-design="studio"] .monogram-grid::after {
+  content: "";
+  position: absolute;
+  width: 43%;
+  height: 28%;
+  right: -8%;
+  top: 9%;
+  border-radius: 999px;
+  background: var(--studio-peach);
+  transform: rotate(32deg);
+}
+
+:root[data-design="studio"] .monogram {
+  font-weight: 800;
+  letter-spacing: -.09em;
+}
+
+:root[data-design="studio"] .grid-axis,
+:root[data-design="studio"] .grid-corner {
+  display: none;
+}
+
+:root[data-design="studio"] .grid-coordinate {
+  z-index: 2;
+  bottom: 1rem;
+  left: 1rem;
+  border-radius: 999px;
+  padding: .25rem .65rem;
+  background: var(--surface);
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .hero-side-caption {
+  letter-spacing: .035em;
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .hero-bottom,
+:root[data-design="studio"] .site-footer {
+  font-weight: 600;
+}
+
+:root[data-design="studio"] .project-card {
+  border-radius: 22px;
+  box-shadow: 0 8px 24px var(--studio-shadow);
+}
+
+:root[data-design="studio"] .project-preview {
+  background: radial-gradient(ellipse at 80% 0, var(--surface) 0, transparent 65%), var(--surface-raised);
+}
+
+:root[data-design="studio"] .preview-two {
+  background: radial-gradient(ellipse at 80% 0, var(--surface) 0, transparent 65%), var(--studio-mint);
+}
+
+:root[data-design="studio"] .preview-three {
+  background: radial-gradient(ellipse at 80% 0, var(--surface) 0, transparent 65%), var(--studio-peach);
+}
+
+:root[data-design="studio"] .project-index {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .project-placeholder-symbol {
+  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  font-weight: 700;
+  opacity: .85;
+}
+
+:root[data-design="studio"] .preview-two .project-placeholder-symbol {
+  color: var(--studio-mint-ink);
+}
+
+:root[data-design="studio"] .tag {
+  padding-inline: .7rem;
+  border-radius: 999px;
+  background: var(--background);
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .project-status {
+  font-weight: 600;
+}
+
+:root[data-design="studio"] .journey-year {
+  font-weight: 800;
+}
+
+:root[data-design="studio"] .skills-placeholder {
+  border-style: solid;
+  border-radius: 22px;
+  background: var(--surface);
+}
+
+:root[data-design="studio"] .skills-brackets,
+:root[data-design="studio"] .social-icon {
+  font-weight: 700;
+}
+
+:root[data-design="studio"] .social-icon {
+  color: var(--studio-mint-ink);
+}
+
+@media (max-width: 460px) {
+  :root[data-design="studio"] .eyebrow {
+    letter-spacing: .035em;
+  }
+}

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Three directions — Patrick Leidel</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #f3f3ef; color: #252827; font: 16px/1.6 "Segoe UI", Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible { outline: 3px solid #4356d6; outline-offset: 5px; }
+    .shell { width: min(1440px, calc(100% - 80px)); margin: auto; }
+    header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px; min-height: 88px; border-bottom: 1px solid #d7d9d2; }
+    .identity { font-size: 14px; font-weight: 600; }
+    .identity span { display: inline-block; font-weight: 800; letter-spacing: -.1em; font-size: 26px; margin-right: 16px; }
+    .back { color: #62665f; font-size: 13px; padding: 12px 0; }
+    .intro { padding: 44px 0 30px; display: flex; align-items: end; justify-content: space-between; gap: 28px; }
+    .eyebrow { margin: 0 0 10px; font: 11px/1.6 Consolas, monospace; letter-spacing: .1em; text-transform: uppercase; color: #62665f; }
+    h1 { margin: 0; font-size: clamp(28px, 3.8vw, 52px); line-height: 1.1; font-weight: 600; letter-spacing: -.045em; }
+    .intro > p { max-width: 330px; color: #62665f; font-size: 14px; margin: 0; }
+    .directions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+    .direction { border: 1px solid #d7d9d2; border-radius: 12px; overflow: hidden; background: #fff; }
+    .preview { display: block; overflow: hidden; border-bottom: 1px solid #d7d9d2; }
+    .preview img { display: block; width: 100%; height: auto; aspect-ratio: 1280 / 980; object-fit: cover; transition: transform 220ms ease; }
+    .preview:hover img { transform: scale(1.015); }
+    .card-copy { padding: 22px 24px 24px; }
+    .card-label { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+    .number { font: 11px Consolas, monospace; color: #646961; }
+    .swatches { display: flex; gap: 5px; }
+    .swatch { width: 14px; height: 14px; border-radius: 50%; border: 1px solid #0002; }
+    h2 { margin: 0; font-size: 32px; line-height: 1.25; }
+    .editorial h2 { font-family: Georgia, serif; font-weight: 400; color: #a3422d; }
+    .signal h2 { font-family: Bahnschrift, "Arial Narrow", sans-serif; font-weight: 700; letter-spacing: -.03em; color: #264ee5; }
+    .studio h2 { font-family: "Trebuchet MS", sans-serif; color: #704aaa; letter-spacing: -.05em; }
+    .description { margin: 8px 0 14px; font-size: 14px; color: #62665f; }
+    .type { margin: 0; font: 11px/1.6 Consolas, monospace; color: #62665f; }
+    .open { display: flex; justify-content: space-between; align-items: center; min-height: 44px; margin-top: 20px; padding: 11px 15px; font-size: 13px; font-weight: 600; border-radius: 5px; }
+    .editorial .open { background: #f6f0e6; color: #873825; }
+    .signal .open { background: #e9efff; color: #2442b7; }
+    .studio .open { background: #f0e9fa; color: #5f388f; border-radius: 24px; }
+    .open:hover { filter: brightness(.96); }
+    .note { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 25px 0 32px; color: #62665f; font-size: 12px; }
+    .note p { margin: 0; }
+    @media (max-width: 1000px) { .shell { width: calc(100% - 40px); } .directions { gap: 14px; } .card-copy { padding: 18px; } .intro { align-items: start; } }
+    @media (max-width: 760px) { .directions { grid-template-columns: 1fr; gap: 24px; } .intro { display: block; padding-top: 32px; } .intro > p { margin-top: 16px; max-width: 100%; } .preview img { max-height: 440px; object-position: top; } }
+    @media (prefers-reduced-motion: reduce) { .preview img { transition: none; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <a class="identity" href="index.html"><span aria-hidden="true">pl.</span>Patrick Leidel</a>
+      <a class="back" href="index.html">Current website ↗</a>
+    </header>
+    <main>
+      <div class="intro">
+        <div><p class="eyebrow">Visual directions / 01—03</p><h1>One story. Three different looks.</h1></div>
+        <p>The same layout and interactions, with three distinct palettes and typefaces. Open a version to explore it.</p>
+      </div>
+      <div class="directions">
+        <article class="direction editorial">
+          <a class="preview" href="index.html?design=editorial&amp;appearance=light" aria-label="Explore Editorial, version 1"><img src="assets/design-previews/editorial.jpg" alt="Editorial website preview with parchment background, terracotta accents, and serif headings." width="1265" height="969"></a>
+          <div class="card-copy">
+            <div class="card-label"><span class="number">01 / WARM & TIMELESS</span><div class="swatches" aria-label="Parchment, terracotta, charcoal"><span class="swatch" style="background:#f6f0e6"></span><span class="swatch" style="background:#a3422d"></span><span class="swatch" style="background:#302921"></span></div></div>
+            <h2>Editorial</h2><p class="description">Paper textures, fine rules, and classic serif type. A quieter, personal feel.</p><p class="type">Georgia + Verdana / Parchment & terracotta</p>
+            <a class="open" href="index.html?design=editorial&amp;appearance=light">Explore version 01 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="direction signal">
+          <a class="preview" href="index.html?design=signal&amp;appearance=dark" aria-label="Explore Signal, version 2"><img src="assets/design-previews/signal.jpg" alt="Signal website preview with midnight blue background, cyan accents, and technical typography." width="1265" height="969"></a>
+          <div class="card-copy">
+            <div class="card-label"><span class="number">02 / PRECISE & ELECTRIC</span><div class="swatches" aria-label="Midnight, cobalt, cyan"><span class="swatch" style="background:#080f20"></span><span class="swatch" style="background:#3976ff"></span><span class="swatch" style="background:#76e4ff"></span></div></div>
+            <h2>Signal</h2><p class="description">Blueprint grids, crisp corners, and cool luminous accents. A technical feel.</p><p class="type">Bahnschrift + Cascadia / Midnight & cyan</p>
+            <a class="open" href="index.html?design=signal&amp;appearance=dark">Explore version 02 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+        <article class="direction studio">
+          <a class="preview" href="index.html?design=studio&amp;appearance=light" aria-label="Explore Studio, version 3"><img src="assets/design-previews/studio.jpg" alt="Studio website preview with lavender background, plum headings, rounded cards, and mint accents." width="1265" height="969"></a>
+          <div class="card-copy">
+            <div class="card-label"><span class="number">03 / SOFT & EXPRESSIVE</span><div class="swatches" aria-label="Lavender, plum, mint"><span class="swatch" style="background:#f7f3fa"></span><span class="swatch" style="background:#743c7c"></span><span class="swatch" style="background:#dceee5"></span></div></div>
+            <h2>Studio</h2><p class="description">Soft shapes, pastel surfaces, and rounded type. An open, friendly feel.</p><p class="type">Trebuchet MS / Lavender, plum & mint</p>
+            <a class="open" href="index.html?design=studio&amp;appearance=light">Explore version 03 <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="note"><p>Each version includes English / Deutsch and System / Dark / Light in the header settings.</p><p>Choose 01, 02, or 03 in the chat.</p></footer>
+  </div>
+</body>
+</html>

@@ -1,4 +1,4 @@
-/* 01 / Editorial — warm paper, terracotta ink, classic serif typography. */
+/* 01 / Editorial - warm paper, terracotta ink, classic serif typography. */
 :root[data-design="editorial"] {
   --background: #f6f0e6;
   --surface: #fffaf1;
@@ -29,7 +29,7 @@
   color-scheme: dark;
 }
 @media (prefers-color-scheme: dark) {
-  :root[data-design="editorial"]:not([data-theme="light"]):not([data-theme="dark"]) {
+  :root[data-design="editorial"][data-theme="system"] {
     --background: #24201b; --surface: #2d2721; --surface-raised: #383026;
     --foreground: #f5ebdc; --muted: #c0ad97; --line: #544738;
     --accent: #eba58b; --accent-fill: #eba58b; --accent-ink: #30221a;

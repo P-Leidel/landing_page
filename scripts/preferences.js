@@ -1,4 +1,4 @@
-const themes = ['system', 'dark', 'light'];
+const themes = ['system', 'dark', 'light', 'sepia'];
 const languages = ['en', 'de'];
 
 export function normalizeTheme(value) {

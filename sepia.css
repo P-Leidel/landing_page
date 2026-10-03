@@ -1,0 +1,18 @@
+/* Loaded after the design styles so all previews share the sepia palette. */
+:root[data-theme="sepia"] {
+  --background: #f2e8d5;
+  --surface: #faf2e4;
+  --surface-raised: #e8dbc4;
+  --foreground: #392b20;
+  --muted: #705b46;
+  --line: #c9b79a;
+  --accent: #855321;
+  --accent-fill: #855321;
+  --accent-ink: #fff8ec;
+  --accent-hover: #684019;
+  --grid: #dac9ad;
+  --signal-cobalt: #9a6b35;
+  --signal-wash: #8553210b;
+  --signal-shadow: #392b201c;
+  color-scheme: light;
+}

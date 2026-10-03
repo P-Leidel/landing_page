@@ -17,11 +17,11 @@ test('the preference reader falls back to English and system appearance', () => 
 });
 
 test('invalid preferences cannot change the supported theme or language', () => {
-  for (const value of [undefined, null, '', 'sepia', 'DARK', 2, {}]) assert.equal(normalizeTheme(value), 'system');
+  for (const value of [undefined, null, '', 'invalid', 'DARK', 2, {}]) assert.equal(normalizeTheme(value), 'system');
   for (const value of [undefined, null, '', 'fr', 'DE', 2, {}]) assert.equal(normalizeLanguage(value), 'en');
   for (const value of ['system', 'dark', 'light']) assert.equal(normalizeTheme(value), value);
   for (const value of ['en', 'de']) assert.equal(normalizeLanguage(value), value);
-  assert.deepEqual(readPreferences(memoryStorage([['patrick-portfolio.theme', 'sepia'], ['patrick-portfolio.language', 'fr']])), { theme: 'system', language: 'en' });
+  assert.deepEqual(readPreferences(memoryStorage([['patrick-portfolio.theme', 'invalid'], ['patrick-portfolio.language', 'fr']])), { theme: 'system', language: 'en' });
 });
 
 test('system follows the device while an explicit appearance overrides it', () => {
@@ -43,7 +43,7 @@ test('saved dark and German preferences survive a new read', () => {
 
 test('unsupported writes cannot replace a previously valid preference', () => {
   const storage = memoryStorage([['patrick-portfolio.theme', 'light']]);
-  assert.equal(savePreference(storage, 'theme', 'sepia'), false);
+  assert.equal(savePreference(storage, 'theme', 'invalid'), false);
   assert.equal(savePreference(storage, 'language', 'fr'), false);
   assert.equal(savePreference(storage, '__proto__', 'dark'), false);
   assert.deepEqual(readPreferences(storage), { theme: 'light', language: 'en' });
@@ -55,6 +55,15 @@ test('unavailable storage does not prevent in-session preference changes', () =>
   assert.equal(savePreference(storage, 'language', 'de'), false);
   assert.equal(savePreference(null, 'theme', 'dark'), false);
   assert.equal(resolveTheme('dark', false), 'dark');
+});
+
+test('sepia persists across visits and overrides either system appearance', () => {
+  const storage = memoryStorage();
+  assert.equal(normalizeTheme('sepia'), 'sepia');
+  assert.equal(savePreference(storage, 'theme', 'sepia'), true);
+  assert.equal(readPreferences(storage).theme, 'sepia');
+  assert.equal(resolveTheme(readPreferences(storage).theme, true), 'sepia');
+  assert.equal(resolveTheme(readPreferences(storage).theme, false), 'sepia');
 });
 
 test('each language can translate every content and accessibility key', () => {

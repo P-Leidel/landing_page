@@ -1,4 +1,4 @@
-# Patrick Leidel — portfolio
+# Patrick Leidel - portfolio
 
 A responsive portfolio built with HTML, CSS, and JavaScript. No dependencies or build step are needed.
 
@@ -9,6 +9,7 @@ Everything needed to run the website is included in this folder:
 ```text
 index.html                 Homepage (Signal design)
 styles.css                 Shared layout and responsive styles
+sepia.css                  Shared warm sepia appearance
 scripts/                   Site behavior, preferences, and translations
 designs/                   Signal, Editorial, and Studio styles
 assets/                    Original design preview images
@@ -49,14 +50,14 @@ Open http://127.0.0.1:4173. Keep the terminal running while you view the page; p
 
 ## Settings
 
-The header settings button opens both English/Deutsch and System/Dark/Light choices. English and Dark are the first-visit defaults. Valid choices are remembered on this browser; if storage is blocked, they still work for the current visit. System follows the device's appearance. The page respects reduced motion.
+The header settings button opens both English/Deutsch and System/Dark/Light/Sepia choices. English and Dark are the first-visit defaults. Valid choices are remembered on this browser; if storage is blocked, they still work for the current visit. System follows the device's appearance. The page respects reduced motion.
 
 ## Add your content
 
 - **Copy:** update the English baseline in `index.html` and both dictionaries in `scripts/translations.js`. Keep each `data-i18n` key present in both dictionaries. Use plain text; the page safely inserts translations as text.
-- **Projects:** Visual Instruction Builder and Inkforge have screenshots in `assets/projects/`, translated descriptions, and repository links. Below each link, independently collapsible sections show the tools used and a placeholder for the project's journey. Clicking a screenshot opens an in-page gallery with swipe, arrow-button, and keyboard navigation; Escape or the close button returns to the card. Add screenshots to the appropriate list in `scripts/screenshot-gallery.js`, with translated alt-text keys in both dictionaries. Each featured project currently has two images. The third card remains a placeholder for the next project. For new projects, follow the existing featured cards and add both language versions in `scripts/translations.js`, including image alt text through `data-i18n-alt`. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
+- **Projects:** Visual Instruction Builder and Inkforge have screenshots in `assets/projects/`, translated descriptions, live app and repository links. Below each link, independently collapsible sections show the tools used and a placeholder for the project's journey. Clicking a screenshot opens an in-page gallery with swipe, arrow-button, and keyboard navigation; Escape or the close button returns to the card. Add screenshots to the appropriate list in `scripts/screenshot-gallery.js`, with translated alt-text keys in both dictionaries. Each featured project currently has two images. The third card remains a placeholder for the next project. For new projects, follow the existing featured cards and add both language versions in `scripts/translations.js`, including image alt text through `data-i18n-alt`. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
 - **Skills:** replace the skills placeholder with your actual skills. Add corresponding English/German entries and update the baseline HTML.
-- **Socials:** replace `.social-placeholder` with real links after you have the profile URLs. Use descriptive labels (such as your profile name or platform). For links opening a new tab, add `rel="noopener noreferrer"` alongside `target="_blank"`.
+- **Socials:** the compact `.header-socials` box links to GitHub; add other profiles when their URLs are available. Use descriptive labels (such as your profile name or platform). For links opening a new tab, add `rel="noopener noreferrer"` alongside `target="_blank"`.
 - **Appearance:** Signal is the selected homepage design. Edit its light, dark, and system-dark tokens in `designs/signal.css`; shared layout rules remain in `styles.css`. Keep the explicit dark and system-dark values aligned.
 - **Identity/metadata:** title and description live in both the HTML head and the translation dictionaries. Age and birth year are omitted.
 
@@ -68,7 +69,7 @@ Open `http://127.0.0.1:4173/compare.html` to compare three visual directions. Ea
 - **02 Signal:** Bahnschrift / Cascadia Code, midnight blue and cyan. `/?design=signal&appearance=dark`
 - **03 Studio:** Trebuchet MS, lavender, plum, and mint. `/?design=studio&appearance=light`
 
-Each direction also supports System/Dark/Light. The `appearance` parameter only sets the starting appearance for that preview; opening a preview does not change stored preferences. Signal uses Manrope and DM Sans with local fallbacks; the alternative directions retain their original font styles. Signal is the homepage default. Style overrides live in `designs/`; original comparison images live in `assets/design-previews/` and predate the typography and branding update.
+Each direction also supports System/Dark/Light/Sepia. The `appearance` parameter only sets the starting appearance for that preview; opening a preview does not change stored preferences. Signal uses Manrope and DM Sans with local fallbacks; the alternative directions retain their original font styles. Signal is the homepage default. Style overrides live in `designs/`; original comparison images live in `assets/design-previews/` and predate the typography and branding update.
 
 ## Tests
 
@@ -80,4 +81,4 @@ node --test
 
 The tests cover preference defaults, validation, theme resolution, persistence, blocked storage, and translation coverage. No npm installation is required.
 
-Projects, skills, and social destinations intentionally remain placeholders until real content is supplied.
+Skills and unfinished project cards remain placeholders until real content is supplied.

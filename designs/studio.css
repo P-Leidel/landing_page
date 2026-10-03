@@ -40,7 +40,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  :root[data-design="studio"]:not([data-theme="light"]):not([data-theme="dark"]) {
+  :root[data-design="studio"][data-theme="system"] {
     --background: #211925;
     --surface: #2b2230;
     --surface-raised: #382b3f;

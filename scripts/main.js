@@ -33,7 +33,6 @@ function applyLanguage() {
   for (const radio of document.querySelectorAll('input[name="language"]')) radio.checked = radio.value === preferences.language;
   document.title = dictionary['meta.title'];
   document.querySelector('meta[name="description"]').content = dictionary['meta.description'];
-  document.querySelector('.settings-current').textContent = preferences.language.toUpperCase();
   updateToggleLabel();
   screenshotGallery.refresh();
 }

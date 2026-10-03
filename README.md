@@ -11,7 +11,7 @@ index.html                 Homepage (Signal design)
 styles.css                 Shared layout and responsive styles
 scripts/                   Site behavior, preferences, and translations
 designs/                   Signal, Editorial, and Studio styles
-assets/                    Favicon and design preview images
+assets/                    Original design preview images
 compare.html               Optional design comparison page
 tests/                     Preference and translation checks
 package.json               JavaScript module configuration and npm test command
@@ -21,7 +21,7 @@ package.json               JavaScript module configuration and npm test command
 README.md                  Setup and editing instructions
 ```
 
-All site assets and scripts use relative paths, so the website can also run under a repository subdirectory. Fonts use local system font stacks. Node is only needed to run tests; Python is one option for serving the website locally.
+Site assets and scripts use relative paths, so the website can also run under a repository subdirectory. The homepage loads Manrope and DM Sans from Google Fonts, with local sans serif fallbacks if unavailable. Node is only needed to run tests; Python is one option for serving the website locally.
 
 ## Create your GitHub repository
 
@@ -54,7 +54,7 @@ The header settings button opens both English/Deutsch and System/Dark/Light choi
 ## Add your content
 
 - **Copy:** update the English baseline in `index.html` and both dictionaries in `scripts/translations.js`. Keep each `data-i18n` key present in both dictionaries. Use plain text; the page safely inserts translations as text.
-- **Projects:** replace each placeholder article with your real project title, description, image, and links. Give new translated text its own dictionary key. Remove the placeholder badge and status once the content is real. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
+- **Projects:** Visual Instruction Builder and Inkforge have screenshots in `assets/projects/`, translated descriptions, and repository links. Clicking a screenshot opens its full-size image. The third card remains a placeholder for the next project. For new projects, follow the existing featured cards and add both language versions in `scripts/translations.js`, including image alt text through `data-i18n-alt`. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
 - **Skills:** replace the skills placeholder with your actual skills. Add corresponding English/German entries and update the baseline HTML.
 - **Socials:** replace `.social-placeholder` with real links after you have the profile URLs. Use descriptive labels (such as your profile name or platform). For links opening a new tab, add `rel="noopener noreferrer"` alongside `target="_blank"`.
 - **Appearance:** Signal is the selected homepage design. Edit its light, dark, and system-dark tokens in `designs/signal.css`; shared layout rules remain in `styles.css`. Keep the explicit dark and system-dark values aligned.
@@ -68,7 +68,7 @@ Open `http://127.0.0.1:4173/compare.html` to compare three visual directions. Ea
 - **02 Signal:** Bahnschrift / Cascadia Code, midnight blue and cyan. `/?design=signal&appearance=dark`
 - **03 Studio:** Trebuchet MS, lavender, plum, and mint. `/?design=studio&appearance=light`
 
-Each direction also supports System/Dark/Light. The `appearance` parameter only sets the starting appearance for that preview; opening a preview does not change stored preferences. Fonts are local font stacks, so no external font service is needed. Signal is the homepage default, with no dot after the name heading. Style overrides live in `designs/`; comparison images live in `assets/design-previews/`.
+Each direction also supports System/Dark/Light. The `appearance` parameter only sets the starting appearance for that preview; opening a preview does not change stored preferences. Signal uses Manrope and DM Sans with local fallbacks; the alternative directions retain their original font styles. Signal is the homepage default. Style overrides live in `designs/`; original comparison images live in `assets/design-previews/` and predate the typography and branding update.
 
 ## Tests
 

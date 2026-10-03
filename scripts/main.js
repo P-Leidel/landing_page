@@ -27,6 +27,7 @@ function applyLanguage() {
   document.documentElement.lang = preferences.language;
   for (const element of document.querySelectorAll('[data-i18n]')) element.textContent = dictionary[element.dataset.i18n];
   for (const element of document.querySelectorAll('[data-i18n-aria]')) element.setAttribute('aria-label', dictionary[element.dataset.i18nAria]);
+  for (const element of document.querySelectorAll('[data-i18n-alt]')) element.setAttribute('alt', dictionary[element.dataset.i18nAlt]);
   for (const radio of document.querySelectorAll('input[name="language"]')) radio.checked = radio.value === preferences.language;
   document.title = dictionary['meta.title'];
   document.querySelector('meta[name="description"]').content = dictionary['meta.description'];

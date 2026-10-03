@@ -10,6 +10,7 @@ Everything needed to run the website is included in this folder:
 index.html                 Homepage (Signal design)
 styles.css                 Shared layout and responsive styles
 sepia.css                  Shared warm sepia appearance
+surfaces.css               Subtle theme-aware surface gradients
 scripts/                   Site behavior, preferences, and translations
 designs/                   Signal, Editorial, and Studio styles
 assets/                    Original design preview images
@@ -55,10 +56,10 @@ The header settings button opens both English/Deutsch and System/Dark/Light/Sepi
 ## Add your content
 
 - **Copy:** update the English baseline in `index.html` and both dictionaries in `scripts/translations.js`. Keep each `data-i18n` key present in both dictionaries. Use plain text; the page safely inserts translations as text.
-- **Projects:** Visual Instruction Builder and Inkforge have screenshots in `assets/projects/`, translated descriptions, live app and repository links. Below each link, independently collapsible sections show the tools used and a placeholder for the project's journey. Clicking a screenshot opens an in-page gallery with swipe, arrow-button, and keyboard navigation; Escape or the close button returns to the card. Add screenshots to the appropriate list in `scripts/screenshot-gallery.js`, with translated alt-text keys in both dictionaries. Each featured project currently has two images. The third card remains a placeholder for the next project. For new projects, follow the existing featured cards and add both language versions in `scripts/translations.js`, including image alt text through `data-i18n-alt`. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
+- **Projects:** Visual Instruction Builder and Inkforge have screenshots in `assets/projects/`, translated descriptions, compact Try me buttons at the upper-right below their screenshots and repository links. Below each link, independently collapsible sections show the tools used and a placeholder for the project's journey. Clicking a screenshot opens an in-page gallery with swipe, arrow-button, and keyboard navigation; Escape or the close button returns to the card. Add screenshots to the appropriate list in `scripts/screenshot-gallery.js`, with translated alt-text keys in both dictionaries. Each featured project currently has two images. The third card remains a placeholder for the next project. For new projects, follow the existing featured cards and add both language versions in `scripts/translations.js`, including image alt text through `data-i18n-alt`. Do not attach a translation key to an element containing a nested icon or other markup; put it on a text span instead.
 - **Skills:** replace the skills placeholder with your actual skills. Add corresponding English/German entries and update the baseline HTML.
 - **Socials:** the compact `.header-socials` box links to GitHub; add other profiles when their URLs are available. Use descriptive labels (such as your profile name or platform). For links opening a new tab, add `rel="noopener noreferrer"` alongside `target="_blank"`.
-- **Appearance:** Signal is the selected homepage design. Edit its light, dark, and system-dark tokens in `designs/signal.css`; shared layout rules remain in `styles.css`. Keep the explicit dark and system-dark values aligned.
+- **Appearance:** Signal is the selected homepage design. Edit its light, dark, and system-dark tokens in `designs/signal.css`; shared layout rules remain in `styles.css`. Keep the explicit dark and system-dark values aligned. `surfaces.css` applies subtle gradients with a 10% accent tint across all appearances; `sepia.css` defines the warm sepia palette.
 - **Identity/metadata:** title and description live in both the HTML head and the translation dictionaries. Age and birth year are omitted.
 
 ## Design previews

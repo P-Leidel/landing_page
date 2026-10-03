@@ -48,7 +48,10 @@ button { cursor: pointer; }
 .header-socials a { display: flex; align-items: center; justify-content: center; gap: .6rem; min-height: 44px; padding: .5rem .85rem; font-size: .8125rem; }
 .header-socials a:hover { color: var(--accent); }
 .header-socials:target { outline: 2px solid var(--accent); outline-offset: 4px; }
-.project-live { margin-right: 1.25rem; }
+.project-card-top { display: flex; align-items: center; justify-content: space-between; align-self: stretch; gap: .75rem; min-height: 36px; }
+.project-live { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; margin-left: auto; padding: .3rem .75rem; flex-shrink: 0; border: 1px solid var(--accent); border-radius: 999px; background: var(--surface); color: var(--foreground); font-size: .75rem; font-weight: 600; }
+.project-live:hover { color: var(--accent); border-color: var(--accent); }
+.project-card-featured .project-content { padding-top: .5rem; }
 .header-actions { display: flex; align-items: center; gap: 2rem; margin-left: auto; max-width: 100%; }
 nav { display: flex; flex-wrap: wrap; gap: 2rem; font-size: .875rem; }
 nav a { display: inline-flex; align-items: center; min-height: 44px; transition: color 140ms; }
@@ -96,8 +99,8 @@ h2 { margin-top: .75rem; font-size: clamp(2rem, 3.6vw, 3.4rem); line-height: 1.1
 .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; }
 .project-card { border: 1px solid var(--line); border-radius: 6px; overflow: hidden; background: var(--surface); }
 .project-card-featured { display: flex; flex-direction: column; }
-.project-screenshot { display: grid; place-items: center; aspect-ratio: 8 / 5; background: var(--surface-raised); border-bottom: 1px solid var(--line); overflow: hidden; }
-.project-screenshot img { display: block; width: 100%; height: auto; }
+.project-screenshot { position: relative; display: grid; place-items: center; aspect-ratio: 8 / 5; background: var(--surface-raised); border-bottom: 1px solid var(--line); overflow: hidden; }
+.project-screenshot img { position: absolute; display: block; width: auto; height: auto; max-width: calc(100% - 1.5rem); max-height: calc(100% - 1.5rem); border: 1px solid var(--card-border, var(--line)); border-radius: 8px; box-shadow: var(--control-shadow, 0 2px 5px #0001); }
 .project-screenshot:focus-visible { outline-offset: -4px; }
 .project-card-featured .project-content { display: flex; flex: 1; flex-direction: column; align-items: flex-start; }
 .project-category { color: var(--accent); font-size: .8125rem; font-weight: 500; }

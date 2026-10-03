@@ -32,6 +32,7 @@
     }
   </script>
   <link rel="stylesheet" href="sepia.css">
+  <link rel="stylesheet" href="surfaces.css">
   <script type="module" src="scripts/main.js"></script>
 </head>
 <body>
@@ -41,7 +42,7 @@
       <div id="connect" class="header-socials" role="group" aria-label="Social profiles" data-i18n-aria="socials.label">
         <a href="https://github.com/P-Leidel" target="_blank" rel="noopener noreferrer" aria-label="Patrick Leidel on GitHub" data-i18n-aria="socials.github">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .75a11.25 11.25 0 0 0-3.56 21.92c.56.1.77-.24.77-.54v-2.1c-3.14.68-3.8-1.33-3.8-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1 1.72 2.64 1.22 3.28.93.1-.73.4-1.22.72-1.5-2.5-.28-5.13-1.25-5.13-5.56 0-1.23.44-2.23 1.16-3.02-.12-.28-.5-1.43.11-2.98 0 0 .94-.3 3.09 1.15a10.77 10.77 0 0 1 5.62 0c2.15-1.46 3.08-1.15 3.08-1.15.62 1.55.23 2.7.12 2.98.72.8 1.15 1.8 1.15 3.02 0 4.32-2.63 5.27-5.14 5.55.4.35.76 1.03.76 2.08v3.11c0 .3.2.65.77.54A11.25 11.25 0 0 0 12 .75Z"/></svg>
-          <span>GitHub</span><span aria-hidden="true">↗</span>
+          <span>GitHub</span>
         </a>
       </div>
       <div class="header-actions">
@@ -117,11 +118,13 @@ Currently in formal training.</p>
               <img src="assets/projects/instruction-builder.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Visual Instruction Builder showing a three-step tomato sauce recipe" data-i18n-alt="project.one.alt">
             </a>
             <div class="project-content">
-              <span class="project-category" data-i18n="project.one.category">Visual planning tool</span>
+              <div class="project-card-top">
+                <span class="project-category" data-i18n="project.one.category">Visual planning tool</span>
+                <a class="project-live" href="https://instructionbuilder-seven.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Try Visual Instruction Builder in a new tab" data-i18n-aria="project.one.open"><span data-i18n="project.try">Try me</span></a>
+              </div>
               <h3>Visual Instruction Builder</h3>
               <p data-i18n="project.one.description">Create step-by-step visual guides with icons, notes, and timings. An offline-first browser app with image and PDF exports.</p>
-              <a class="project-repo project-live" href="https://instructionbuilder-seven.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="project.open">Open app</span><span aria-hidden="true">↗</span><span class="sr-only"> - Visual Instruction Builder</span></a>
-              <a class="project-repo" href="https://github.com/P-Leidel/instruction_builder" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span aria-hidden="true">↗</span><span class="sr-only"> - Visual Instruction Builder</span></a>
+              <a class="project-repo" href="https://github.com/P-Leidel/instruction_builder" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span class="sr-only"> - Visual Instruction Builder</span></a>
               <div class="project-details">
                 <details><summary><span data-i18n="project.tools">Tools used</span></summary><p data-i18n="project.one.tools">TypeScript, Preact, and Vite. Hosted on Vercel.</p></details>
                 <details><summary><span data-i18n="project.journey">The Journey</span></summary><p data-i18n="project.journeyPlaceholder">The story behind this project is coming soon: the idea, how I built it, and what I learned along the way.</p></details>
@@ -133,11 +136,13 @@ Currently in formal training.</p>
               <img src="assets/projects/inkforge.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Inkforge gameplay with drawn defenses protecting the Ink Core" data-i18n-alt="project.two.alt">
             </a>
             <div class="project-content">
-              <span class="project-category" data-i18n="project.two.category">Physics game</span>
+              <div class="project-card-top">
+                <span class="project-category" data-i18n="project.two.category">Physics game</span>
+                <a class="project-live" href="https://p-leidel.github.io/inkforge/" target="_blank" rel="noopener noreferrer" aria-label="Try Inkforge in a new tab" data-i18n-aria="project.two.open"><span data-i18n="project.try">Try me</span></a>
+              </div>
               <h3>Inkforge</h3>
               <p data-i18n="project.two.description">Draw your defenses and protect the Ink Core from enemy waves. A 2D physics game where every line uses a limited supply of ink.</p>
-              <a class="project-repo project-live" href="https://p-leidel.github.io/inkforge/" target="_blank" rel="noopener noreferrer"><span data-i18n="project.open">Open app</span><span aria-hidden="true">↗</span><span class="sr-only"> - Inkforge</span></a>
-              <a class="project-repo" href="https://github.com/P-Leidel/inkforge" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span aria-hidden="true">↗</span><span class="sr-only"> - Inkforge</span></a>
+              <a class="project-repo" href="https://github.com/P-Leidel/inkforge" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span class="sr-only"> - Inkforge</span></a>
               <div class="project-details">
                 <details><summary><span data-i18n="project.tools">Tools used</span></summary><p data-i18n="project.two.tools">TypeScript, Phaser, Box2D, and Vite. Hosted on GitHub Pages.</p></details>
                 <details><summary><span data-i18n="project.journey">The Journey</span></summary><p data-i18n="project.journeyPlaceholder">The story behind this project is coming soon: the idea, how I built it, and what I learned along the way.</p></details>

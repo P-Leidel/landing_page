@@ -1,0 +1,52 @@
+/* A ten-percent accent tint adds a quiet shift without changing the palette. */
+:root {
+  --card-border: color-mix(in srgb, var(--line) 88%, var(--foreground));
+  --shadow-color: color-mix(in srgb, var(--foreground) 7%, transparent);
+  --card-shadow: 0 2px 5px var(--shadow-color), 0 10px 24px var(--shadow-color);
+  --control-shadow: 0 2px 5px var(--shadow-color);
+  --surface-gradient: linear-gradient(135deg, var(--surface) 20%, color-mix(in srgb, var(--surface) 90%, var(--accent)) 100%);
+  --raised-gradient: linear-gradient(135deg, var(--surface-raised) 20%, color-mix(in srgb, var(--surface-raised) 90%, var(--accent)) 100%);
+}
+
+:root[data-theme="dark"],
+:root[data-resolved-theme="dark"] {
+  --shadow-color: #0000002e;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="system"] { --shadow-color: #0000002e; }
+}
+
+:root body {
+  background-image: linear-gradient(135deg, transparent 20%, color-mix(in srgb, var(--accent) 10%, transparent) 100%);
+}
+
+:root :is(.project-card, .hero-panel, .settings-panel, .settings-toggle, .header-socials, .screenshot-gallery, .project-live, .skills-placeholder) {
+  background-color: var(--surface);
+  background-image: var(--surface-gradient);
+}
+
+:root :is(.panel-symbol, .gallery-control, .project-screenshot) {
+  background-image: var(--raised-gradient);
+}
+
+:root :is(.project-card, .hero-panel, .settings-panel, .settings-toggle, .header-socials, .screenshot-gallery, .skills-placeholder, .panel-symbol, .gallery-control) {
+  border-color: var(--card-border);
+}
+
+:root :is(.settings-toggle, .gallery-control):hover,
+:root .settings-toggle[aria-expanded="true"] {
+  border-color: var(--accent);
+}
+
+:root :is(.project-card, .hero-panel, .skills-placeholder) {
+  box-shadow: var(--card-shadow);
+}
+
+:root :is(.header-socials, .settings-toggle, .gallery-control, .project-live) {
+  box-shadow: var(--control-shadow);
+}
+
+:root .settings-panel {
+  box-shadow: 0 4px 12px var(--shadow-color), 0 16px 40px var(--shadow-color);
+}

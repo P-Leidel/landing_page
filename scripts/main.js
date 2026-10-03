@@ -1,5 +1,6 @@
 import { readPreferences, savePreference, resolveTheme, normalizeTheme } from './preferences.js';
 import { translations } from './translations.js';
+import { initScreenshotGallery } from './screenshot-gallery.js';
 
 let storage = null;
 try { storage = window.localStorage; } catch (_) { /* Preferences still work for this visit. */ }
@@ -11,6 +12,7 @@ const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
 const settings = document.querySelector('.settings');
 const toggle = document.getElementById('settings-toggle');
 const panel = document.getElementById('settings-panel');
+const screenshotGallery = initScreenshotGallery(() => translations[preferences.language]);
 
 function updateToggleLabel() {
   toggle.setAttribute('aria-label', translations[preferences.language][panel.hidden ? 'settings.open' : 'settings.close']);
@@ -33,6 +35,7 @@ function applyLanguage() {
   document.querySelector('meta[name="description"]').content = dictionary['meta.description'];
   document.querySelector('.settings-current').textContent = preferences.language.toUpperCase();
   updateToggleLabel();
+  screenshotGallery.refresh();
 }
 
 function setMenuOpen(open) {

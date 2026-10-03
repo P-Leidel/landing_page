@@ -96,7 +96,7 @@ Currently in formal training.</p>
         </div>
         <div class="project-grid">
           <article class="project-card project-card-featured">
-            <a class="project-screenshot" href="assets/projects/instruction-builder.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Visual Instruction Builder screenshot" data-i18n-aria="project.one.screenshot">
+            <a class="project-screenshot" href="assets/projects/instruction-builder.jpg" data-gallery="instruction-builder" aria-label="View Visual Instruction Builder screenshots" data-i18n-aria="project.one.screenshot">
               <img src="assets/projects/instruction-builder.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Visual Instruction Builder showing a three-step tomato sauce recipe" data-i18n-alt="project.one.alt">
             </a>
             <div class="project-content">
@@ -104,10 +104,14 @@ Currently in formal training.</p>
               <h3>Visual Instruction Builder</h3>
               <p data-i18n="project.one.description">Create step-by-step visual guides with icons, notes, and timings. An offline-first browser app with image and PDF exports.</p>
               <a class="project-repo" href="https://github.com/P-Leidel/instruction_builder" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span aria-hidden="true">↗</span><span class="sr-only"> — Visual Instruction Builder</span></a>
+              <div class="project-details">
+                <details><summary><span data-i18n="project.tools">Tools used</span></summary><p data-i18n="project.one.tools">TypeScript, Preact, and Vite. Hosted on Vercel.</p></details>
+                <details><summary><span data-i18n="project.journey">The Journey</span></summary><p data-i18n="project.journeyPlaceholder">The story behind this project is coming soon: the idea, how I built it, and what I learned along the way.</p></details>
+              </div>
             </div>
           </article>
           <article class="project-card project-card-featured">
-            <a class="project-screenshot" href="assets/projects/inkforge.jpg" target="_blank" rel="noopener noreferrer" aria-label="View Inkforge screenshot" data-i18n-aria="project.two.screenshot">
+            <a class="project-screenshot" href="assets/projects/inkforge.jpg" data-gallery="inkforge" aria-label="View Inkforge screenshots" data-i18n-aria="project.two.screenshot">
               <img src="assets/projects/inkforge.jpg" width="1280" height="800" loading="lazy" decoding="async" alt="Inkforge gameplay with drawn defenses protecting the Ink Core" data-i18n-alt="project.two.alt">
             </a>
             <div class="project-content">
@@ -115,6 +119,10 @@ Currently in formal training.</p>
               <h3>Inkforge</h3>
               <p data-i18n="project.two.description">Draw your defenses and protect the Ink Core from enemy waves. A 2D physics game where every line uses a limited supply of ink.</p>
               <a class="project-repo" href="https://github.com/P-Leidel/inkforge" target="_blank" rel="noopener noreferrer"><span data-i18n="project.github">View on GitHub</span><span aria-hidden="true">↗</span><span class="sr-only"> — Inkforge</span></a>
+              <div class="project-details">
+                <details><summary><span data-i18n="project.tools">Tools used</span></summary><p data-i18n="project.two.tools">TypeScript, Phaser, Box2D, and Vite. Hosted on GitHub Pages.</p></details>
+                <details><summary><span data-i18n="project.journey">The Journey</span></summary><p data-i18n="project.journeyPlaceholder">The story behind this project is coming soon: the idea, how I built it, and what I learned along the way.</p></details>
+              </div>
             </div>
           </article>
           <article class="project-card">
@@ -135,5 +143,21 @@ Currently in formal training.</p>
     </main>
     <footer class="site-footer"><p>© 2026 Patrick Leidel</p><a href="#main" data-i18n="footer.top">Back to top</a><span data-i18n="footer.note">A new craft. A continuing story.</span></footer>
   </div>
+  <dialog id="screenshot-gallery" class="screenshot-gallery" aria-labelledby="gallery-title" aria-describedby="gallery-hint">
+    <div class="gallery-header">
+      <h2 id="gallery-title"></h2>
+      <button id="gallery-close" class="gallery-control" type="button" aria-label="Close screenshots" data-i18n-aria="gallery.close" autofocus><span aria-hidden="true">×</span></button>
+    </div>
+    <figure>
+      <div class="gallery-stage"><img id="gallery-image" alt="" draggable="false"></div>
+      <figcaption id="gallery-caption"></figcaption>
+    </figure>
+    <div class="gallery-navigation">
+      <button id="gallery-previous" class="gallery-control" type="button" aria-label="Previous screenshot" data-i18n-aria="gallery.previous"><span aria-hidden="true">←</span></button>
+      <span id="gallery-counter" aria-live="polite" aria-atomic="true"></span>
+      <button id="gallery-next" class="gallery-control" type="button" aria-label="Next screenshot" data-i18n-aria="gallery.next"><span aria-hidden="true">→</span></button>
+    </div>
+    <p id="gallery-hint" data-i18n="gallery.hint">Swipe or use the arrows to browse. Press Escape to close.</p>
+  </dialog>
 </body>
 </html>

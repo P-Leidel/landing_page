@@ -16,6 +16,14 @@ const galleries = {
       { src: 'assets/projects/inkforge-sandbox.jpg', altKey: 'project.two.sandboxAlt' },
     ],
   },
+  vaporcruise: {
+    title: 'VaporCruise',
+    images: [
+      { src: 'assets/projects/vaporcruise-magenta.jpg', altKey: 'project.three.alt' },
+      { src: 'assets/projects/vaporcruise-cyan.jpg', altKey: 'project.three.cyanAlt' },
+      { src: 'assets/projects/vaporcruise-amber.jpg', altKey: 'project.three.amberAlt' },
+    ],
+  },
 };
 
 export function initScreenshotGallery(getDictionary) {
